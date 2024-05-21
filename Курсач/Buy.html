@@ -1,0 +1,225 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apex Shop</title>
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="shortcut icon" href="lambda.svg" type="image/x-icon">
+        
+        <style>
+
+    @import url(https://fonts.googleapis.com/css?family=Nunito);
+    /* Общие стили */
+    body {
+        font-family: 'Nunito', sans-serif;
+        background: linear-gradient(to bottom, #000000, #960606);
+        background-size: 100% 200%;
+        background-attachment: fixed;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .payment-container {
+        max-width: 400px;
+        margin: 50px auto; /* Переместил форму вниз */
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5); /* Более прозрачный цвет */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 20px); /* Уменьшил длину поля ввода */
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: white;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #f44336;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"] {
+        height: 35px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #d32f2f;
+    
+    }
+
+    .footer {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 20px 0;
+    }
+
+    /* Медиа-запросы для адаптивного дизайна */
+    @media screen and (max-width: 480px) {
+        .payment-container {
+            width: 90%;
+        }
+    }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+            <a href="#" class="logo"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+            
+                
+                <svg
+                version="1.0"
+                width="70"
+                height="70"
+                id="svg2"
+                sodipodi:docname="lambda.svg"
+                inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+                viewBox="0 0 175 175"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:svg="http://www.w3.org/2000/svg">
+                <sodipodi:namedview
+                    id="namedview344"
+                    pagecolor="#ffffff"
+                    bordercolor="#000000"
+                    borderopacity="0.25"
+                    inkscape:showpageshadow="2"
+                    inkscape:pageopacity="0.0"
+                    inkscape:pagecheckerboard="0"
+                    inkscape:deskcolor="#d1d1d1"
+                    showgrid="false"
+                    inkscape:zoom="8.6853851"
+                    inkscape:cx="71.269148"
+                    inkscape:cy="34.137807"
+                    inkscape:window-width="1920"
+                    inkscape:window-height="991"
+                    inkscape:window-x="-9"
+                    inkscape:window-y="-9"
+                    inkscape:window-maximized="1"
+                    inkscape:current-layer="svg2" />
+                <defs
+                    id="defs4">
+                    <marker
+                    refX="0"
+                    refY="0"
+                    orient="auto"
+                    style="overflow:visible"
+                    id="Arrow1Mstart">
+                    <path
+                        d="M 0,0 5,-5 -12.5,0 5,5 Z"
+                        transform="matrix(0.4,0,0,0.4,4,0)"
+                        style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+                        id="path3206" />
+                    </marker>
+                    <marker
+                    refX="0"
+                    refY="0"
+                    orient="auto"
+                    style="overflow:visible"
+                    id="Arrow1Mend">
+                    <path
+                        d="M 0,0 5,-5 -12.5,0 5,5 Z"
+                        transform="matrix(-0.4,0,0,-0.4,-4,0)"
+                        style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+                        id="path3209" />
+                    </marker>
+                    <marker
+                    refX="0"
+                    refY="0"
+                    orient="auto"
+                    style="overflow:visible"
+                    id="Arrow1Lstart">
+                    <path
+                        d="M 0,0 5,-5 -12.5,0 5,5 Z"
+                        transform="matrix(0.8,0,0,0.8,10,0)"
+                        style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+                        id="path3200" />
+                    </marker>
+                </defs>
+                <path
+                    d="M 37.25954,8.2688958 V 34.176478 H 58.595197 L 67.358055,61.227042 2.208105,162.19042 H 34.21159 l 46.48125,-68.5789 30.47951,76.96077 48.00522,-15.23976 -7.61987,-23.62162 -22.09765,6.85789 L 77.644889,8.2688958 Z"
+                    style="fill:#fb7e14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                    id="path2255" />
+                <path
+                    style="fill:#f44336;stroke-width:0.230272"
+                    d="M 96.070312,132.10818 C 87.719042,111.0133 80.814399,93.709483 80.726666,93.655261 80.638932,93.601039 70.115049,108.99095 57.340257,127.85505 l -23.226889,34.29836 -15.844782,0.009 c -12.615383,0.007 -15.809956,-0.0496 -15.67391,-0.27879 0.09398,-0.15831 14.677976,-22.77389 32.408882,-50.25684 C 52.734463,84.143876 67.272432,61.450582 67.310153,61.197283 67.347876,60.943984 65.436242,54.778454 63.062076,47.496106 L 58.745413,34.255473 48.098862,34.195604 37.45231,34.135738 V 21.241547 8.3473558 l 20.066058,0.05883 20.06606,0.05883 25.855432,65.0148702 c 14.22049,35.758184 25.90015,65.059594 25.9548,65.114234 0.0547,0.0546 4.94626,-1.40534 10.87024,-3.24443 5.92399,-1.83909 10.88704,-3.34227 11.029,-3.3404 0.39146,0.005 7.76528,23.10377 7.43407,23.28733 -0.14728,0.0816 -10.74821,3.47417 -23.55763,7.53898 -12.80941,4.06479 -23.4307,7.44372 -23.60287,7.50872 -0.23026,0.0869 -4.32764,-10.02254 -15.497158,-38.23615 z"
+                    id="path484" />
+                <text
+                    xml:space="preserve"
+                    style="font-size:30px;fill:#f44336;stroke-width:2.5"
+                    x="74.838364"
+                    y="31.086706"
+                    id="text573"><tspan
+                    sodipodi:role="line"
+                    id="tspan571"
+                    style="stroke-width:2.5"
+                    x="74.838364"
+                    y="31.086706">STORE</tspan></text>
+                </svg>
+                
+                </a>
+            <div class="menu-btn">Меню</div>
+                
+            </div>
+            <ul class="menu">
+                <li><a  href="index.html">Главная</a></li>
+                <li><a href="support.html">Жалоба</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a id="selectedlist" href="#">Корзина</a></li>
+            </ul>
+            </div>
+        </header>
+
+        <div class="payment-container">
+            <h1>Оплата</h1>
+            <form action="index.html" method="post">
+                <label for="card-number">Номер карты:</label><br>
+                <input type="text" id="card-number" name="card-number" required><br><br>
+                <label for="card-expiry">Срок действия:</label><br>
+                <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" required><br><br>
+                <label for="card-cvc">CVC:</label><br>
+                <input type="text" id="card-cvc" name="card-cvc" required><br><br>
+                <label for="card-holder">Имя на карте:</label><br>
+                <input type="text" id="card-holder" name="card-holder" required><br><br>
+                <input type="submit" value="Buy" class="checkout-button" id="buyButton">
+            </form>
+        </div>
+        <br><br><br>
+        <footer class="footer">
+            <p>+375 29 252 07 35</p>
+            <p>Email: sanjabr82@gmail.com</p>
+            <p>GitHub: Kocherga325</p>
+        </footer>
+        <script src="js/burger.js"></script>
+        <script src="js/valid.js"></script>
+      
+    </body>
+    </html>

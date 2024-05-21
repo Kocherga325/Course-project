@@ -1,0 +1,142 @@
+.product-icon {
+  width: 90px;
+  height: 120px;
+  border: #ff0000 5px;
+  border-radius: 5px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+}
+
+.product {
+  background-color: rgba(8, 8, 8, 0.697);
+  margin: 10px;
+  padding: 5px;
+  width: 250px;
+  border-radius: 10px;
+  /* добавляем гладкие углы */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product-details {
+  margin-top: 20px;
+}
+
+#errorMessage {
+  display: none;
+  position: fixed;
+  top: -190px;
+  right: -350px;
+  background-color: rgba(255, 0, 0, 0.558);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  animation-name: slideInError;
+  animation-duration: 0.5s;
+}
+
+@keyframes slideInError {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(221, 221, 221, 0.303);
+  text-align: center;
+  font-size: 12px;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+
+html,
+body {
+  height: 100%;
+
+}
+
+body {
+  background: linear-gradient(to bottom, #000000, #960606);
+  background-size: 100% 200%;
+  background-attachment: fixed;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+
+
+.product .button {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: #f44336;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.product button:hover {
+  background-color: #f4433689;
+  color: #333333;
+}
+
+.product button:active {
+  background-color: #4444445d;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+.price {
+  background-color: #F44336;
+  color: white;
+  margin-left: 75px;
+  margin-right: 75px;
+  border-radius: 5px;
+  text-decoration: bold;
+}
+
+h3 {
+  color: white;
+}
